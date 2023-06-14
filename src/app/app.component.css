@@ -1,0 +1,109 @@
+.nav {
+  width: 100%;
+  height: 8rem;
+  background-color: #b08ecd;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 2rem;
+  border-bottom: 0.5rem solid #f8e5a2;
+}
+.info {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  & p {
+    text-transform: uppercase;
+    font-weight: 700;
+  }
+}
+.hr {
+  background-color: #f8e5a2;
+  width: 95%;
+  height: 2px;
+  margin: 10px auto;
+}
+.body {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  gap: 80px;
+  padding: 3rem 9rem;
+  .content {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 80px;
+    padding: 3rem 9rem;
+    & .form {
+      & form {
+        width: 100%;
+        height: 100%;
+      }
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      & .input {
+        display: flex;
+        width: 531px;
+        padding: 14px 22px;
+        border-radius: 63px;
+        background-color: #fff;
+        margin: 50px auto 0;
+        & input {
+          border: 0;
+          outline: 0;
+          width: 100%;
+          font-size: 18px;
+        }
+        & button {
+          background: none;
+          border: 0;
+          cursor: pointer;
+        }
+      }
+    }
+  }
+
+  .resultado {
+    .fase {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 3rem;
+      .conteudo .estrela-fase {
+        display: flex;
+        gap: 1.5rem;
+        align-items: center;
+        margin-bottom: 1rem;
+      }
+      .btns {
+        display: flex;
+        flex-direction: column;
+        align-items: right;
+        gap: 1rem;
+        & button {
+          border: none;
+          background-color: #fff;
+          padding: 0.6rem;
+          text-transform: uppercase;
+          cursor: pointer;
+          border-radius: 1.5rem;
+        }
+      }
+    }
+  }
+}
+
+h2 {
+  font-size: 2rem;
+}
+h3 {
+  font-size: 1.5rem;
+}
+p {
+  margin: 0.5rem 0;
+}
