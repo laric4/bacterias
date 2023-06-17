@@ -46,8 +46,9 @@
           <div class="btns">
             <button (click)="cicloVida('nebulosa')">Ciclo de Vida</button>
             <button (click)="oQueE('nebulosa')">O que é?</button>
-            <button (click)="tempoFusao('nebulosa')">Tempo de Fusão</button>
+            <button (click)="tempoFusao('nebulosa')">Tempo de Fusão</button> <!-- apagar se nao tiver nada -->
             <button (click)="composicao('nebulosa')">Composição</button>
+            <button (click)="InformacoesGerais('nebulosa')">Informações gerais</button>
           </div>
         </div>
         <div *ngIf="nebulosaCicloVida">
@@ -66,6 +67,10 @@
           <h3>Composição</h3>
           <p>{{ nebulosa.composicao }}</p>
         </div>
+        <div *ngIf="nebulosaInformacoesGerais">
+          <h3>Informações Gerais</h3>
+          <p>{{ nebulosa.informacoesgerais }}</p>
+        </div>
       </div>
 
       <div class="conteudo">
@@ -77,6 +82,7 @@
             <button (click)="oQueE('protoestrela')">O que é?</button>
             <button (click)="tempoFusao('protoestrela')">Tempo de Fusão</button>
             <button (click)="composicao('protoestrela')">Composição</button>
+            <button (click)="InformacoesGerais('buraco negro')">Informações gerais</button>
           </div>
         </div>
         <div *ngIf="protoEstrelaCicloVida">
@@ -98,37 +104,32 @@
       </div>
 
       <div class="conteudo">
-        <h2>III. {{ sequenciaprincipal.name }}</h2>
+        <h2>III. {{ anavermelha.name }}</h2>
         <div class="estrela-fase">
-          <img src="{{ sequenciaprincipal.img }}" alt="" />
+          <img src="{{ anavermelha.img }}" alt="" />
           <div class="btns">
-            <button (click)="cicloVida('Sequencia principal')">
-              Ciclo de Vida
-            </button>
+            <button (click)="cicloVida('Sequencia principal')">Ciclo de Vida</button>
             <button (click)="oQueE('Sequencia principal')">O que é?</button>
-            <button (click)="tempoFusao('Sequencia principal')">
-              Tempo de Fusão
-            </button>
-            <button (click)="composicao('Sequencia principal')">
-              Composição
-            </button>
+            <button (click)="tempoFusao('Sequencia principal')">Tempo de Fusão</button>
+            <button (click)="composicao('Sequencia principal')">Composição</button>
+            <button (click)="InformacoesGerais('buraco negro')">Informações gerais</button>
           </div>
         </div>
-        <div *ngIf="sequenciaprincipalCicloVida">
+        <div *ngIf="anavermelhaCicloVida">
           <h3>Ciclo de vida</h3>
-          <p>{{ sequenciaprincipal.ciclodevida }}</p>
+          <p>{{ anavermelha.ciclodevida }}</p>
         </div>
-        <div *ngIf="sequenciaprincipaloQueE">
+        <div *ngIf="anavermelhaoQueE">
           <h3>O que é?</h3>
-          <p>{{ sequenciaprincipal.oque }}</p>
+          <p>{{ anavermelha.oque }}</p>
         </div>
-        <div *ngIf="sequenciaprincipalTempoFusao">
+        <div *ngIf="anavermelhaTempoFusao">
           <h3>Processo de fusão</h3>
-          <p>{{ sequenciaprincipal.processofusao }}</p>
+          <p>{{ anavermelha.processofusao }}</p>
         </div>
-        <div *ngIf="sequenciaprincipalComposicao">
+        <div *ngIf="anavermelhaComposicao">
           <h3>Composição</h3>
-          <p>{{ sequenciaprincipal.composicao }}</p>
+          <p>{{ anavermelha.composicao }}</p>
         </div>
       </div>
 
@@ -137,14 +138,11 @@
         <div class="estrela-fase">
           <img src="{{ gigantevermelha.img }}" alt="" />
           <div class="btns">
-            <button (click)="cicloVida('Gigante vermelha')">
-              Ciclo de Vida
-            </button>
+            <button (click)="cicloVida('Gigante vermelha')">Ciclo de Vida</button>
             <button (click)="oQueE('Gigante vermelha')">O que é?</button>
-            <button (click)="tempoFusao('Gigante vermelha')">
-              Tempo de Fusão
-            </button>
+            <button (click)="tempoFusao('Gigante vermelha')">Tempo de Fusão</button>
             <button (click)="composicao('Gigante vermelha')">Composição</button>
+            <button (click)="InformacoesGerais('buraco negro')">Informações gerais</button>
           </div>
         </div>
         <div *ngIf="gigantevermelhaCicloVida">
@@ -174,6 +172,7 @@
             <button (click)="oQueE('Anã branca')">O que é?</button>
             <button (click)="tempoFusao('Anã branca')">Tempo de Fusão</button>
             <button (click)="composicao('Anã branca')">Composição</button>
+            <button (click)="InformacoesGerais('buraco negro')">Informações gerais</button>
           </div>
         </div>
         <div *ngIf="anabrancaCicloVida">
@@ -194,6 +193,7 @@
         </div>
       </div>
     </div>
+
     <div class="fase" *ngSwitchCase="'segundo'">
       <div class="conteudo">
         <h2>I. {{ nebulosa.name }}</h2>
@@ -204,6 +204,7 @@
             <button (click)="oQueE('nebulosa')">O que é?</button>
             <button (click)="tempoFusao('nebulosa')">Tempo de Fusão</button>
             <button (click)="composicao('nebulosa')">Composição</button>
+            <button (click)="InformacoesGerais('buraco negro')">Informações gerais</button>
           </div>
         </div>
         <div *ngIf="nebulosaCicloVida">
@@ -225,53 +226,75 @@
       </div>
 
       <div class="conteudo">
-        <h2>II. {{ sequenciaprincipal.name }}</h2>
+        <h2>II. {{ protoestrela.name }}</h2>
         <div class="estrela-fase">
-          <img src="{{ sequenciaprincipal.img }}" alt="" />
+          <img src="{{ protoestrela.img }}" alt="" />
           <div class="btns">
-            <button (click)="cicloVida('Sequencia principal')">
-              Ciclo de Vida
-            </button>
-            <button (click)="oQueE('Sequencia principal')">O que é?</button>
-            <button (click)="tempoFusao('Sequencia principal')">
-              Tempo de Fusão
-            </button>
-            <button (click)="composicao('Sequencia principal')">
-              Composição
-            </button>
+            <button (click)="cicloVida('protoestrela')">Ciclo de Vida</button>
+            <button (click)="oQueE('protoestrela')">O que é?</button>
+            <button (click)="tempoFusao('protoestrela')">Tempo de Fusão</button>
+            <button (click)="composicao('protoestrela')">Composição</button>
+            <button (click)="InformacoesGerais('buraco negro')">Informações gerais</button>
           </div>
         </div>
-        <div *ngIf="sequenciaprincipalCicloVida">
+        <div *ngIf="protoEstrelaCicloVida">
           <h3>Ciclo de vida</h3>
-          <p>{{ sequenciaprincipal.ciclodevida }}</p>
+          <p>{{ protoestrela.ciclodevida }}</p>
         </div>
-        <div *ngIf="sequenciaprincipaloQueE">
+        <div *ngIf="protoEstrelaoQueE">
           <h3>O que é?</h3>
-          <p>{{ sequenciaprincipal.oque }}</p>
+          <p>{{ protoestrela.oque }}</p>
         </div>
-        <div *ngIf="sequenciaprincipalTempoFusao">
+        <div *ngIf="protoEstrelaTempoFusao">
           <h3>Processo de fusão</h3>
-          <p>{{ sequenciaprincipal.processofusao }}</p>
+          <p>{{ protoestrela.processofusao }}</p>
         </div>
-        <div *ngIf="sequenciaprincipalComposicao">
+        <div *ngIf="protoEstrelaComposicao">
           <h3>Composição</h3>
-          <p>{{ sequenciaprincipal.composicao }}</p>
+          <p>{{ protoestrela.composicao }}</p>
         </div>
       </div>
 
       <div class="conteudo">
-        <h2>III. {{ gigantevermelha.name }}</h2>
+        <h2>III. {{ estrelaamarela.name }}</h2>
+        <div class="estrela-fase">
+          <img src="{{ estrelaamarela.img }}" alt="" />
+          <div class="btns">
+            <button (click)="cicloVida('Sequencia principal')">Ciclo de Vida</button>
+            <button (click)="oQueE('Sequencia principal')">O que é?</button>
+            <button (click)="tempoFusao('Sequencia principal')">Tempo de Fusão</button>
+            <button (click)="composicao('Sequencia principal')">Composição</button>
+            <button (click)="InformacoesGerais('buraco negro')">Informações gerais</button>
+          </div>
+        </div>
+        <div *ngIf="estrelaamarelaCicloVida">
+          <h3>Ciclo de vida</h3>
+          <p>{{ estrelaamarela.ciclodevida }}</p>
+        </div>
+        <div *ngIf="estrelaamarelaoQueE">
+          <h3>O que é?</h3>
+          <p>{{ estrelaamarela.oque }}</p>
+        </div>
+        <div *ngIf="estrelaamarelaTempoFusao">
+          <h3>Processo de fusão</h3>
+          <p>{{ estrelaamarela.processofusao }}</p>
+        </div>
+        <div *ngIf="estrelaamarelaComposicao">
+          <h3>Composição</h3>
+          <p>{{ estrelaamarela.composicao }}</p>
+        </div>
+      </div>
+
+      <div class="conteudo">
+        <h2>IV. {{ gigantevermelha.name }}</h2>
         <div class="estrela-fase">
           <img src="{{ gigantevermelha.img }}" alt="" />
           <div class="btns">
-            <button (click)="cicloVida('Gigante vermelha')">
-              Ciclo de Vida
-            </button>
+            <button (click)="cicloVida('Gigante vermelha')">Ciclo de Vida</button>
             <button (click)="oQueE('Gigante vermelha')">O que é?</button>
-            <button (click)="tempoFusao('Gigante vermelha')">
-              Tempo de Fusão
-            </button>
+            <button (click)="tempoFusao('Gigante vermelha')">Tempo de Fusão</button>
             <button (click)="composicao('Gigante vermelha')">Composição</button>
+            <button (click)="InformacoesGerais('buraco negro')">Informações gerais</button>
           </div>
         </div>
         <div *ngIf="gigantevermelhaCicloVida">
@@ -293,20 +316,15 @@
       </div>
 
       <div class="conteudo">
-        <h2>IV. {{ supergigantevermelha.name }}</h2>
+        <h2>V. {{ supergigantevermelha.name }}</h2>
         <div class="estrela-fase">
           <img src="{{ supergigantevermelha.img }}" alt="" />
           <div class="btns">
-            <button (click)="cicloVida('Supergigante vermelha')">
-              Ciclo de Vida
-            </button>
+            <button (click)="cicloVida('Supergigante vermelha')">Ciclo de Vida</button>
             <button (click)="oQueE('Supergigante vermelha')">O que é?</button>
-            <button (click)="tempoFusao('Supergigante vermelha')">
-              Tempo de Fusão
-            </button>
-            <button (click)="composicao('Supergigante vermelha')">
-              Composição
-            </button>
+            <button (click)="tempoFusao('Supergigante vermelha')">Tempo de Fusão</button>
+            <button (click)="composicao('Supergigante vermelha')">Composição</button>
+            <button (click)="InformacoesGerais('buraco negro')">Informações gerais</button>
           </div>
         </div>
         <div *ngIf="supergigantevermelhaCicloVida">
@@ -328,20 +346,15 @@
       </div>
 
       <div class="conteudo">
-        <h2>V. {{ nebulosaplanetaria.name }}</h2>
+        <h2>VI. {{ nebulosaplanetaria.name }}</h2>
         <div class="estrela-fase">
           <img src="{{ nebulosaplanetaria.img }}" alt="" />
           <div class="btns">
-            <button (click)="cicloVida('Nebulosa planetária')">
-              Ciclo de Vida
-            </button>
+            <button (click)="cicloVida('Nebulosa planetária')">Ciclo de Vida</button>
             <button (click)="oQueE('Nebulosa planetária')">O que é?</button>
-            <button (click)="tempoFusao('Nebulosa planetária')">
-              Tempo de Fusão
-            </button>
-            <button (click)="composicao('Nebulosa planetária')">
-              Composição
-            </button>
+            <button (click)="tempoFusao('Nebulosa planetária')">Tempo de Fusão</button>
+            <button (click)="composicao('Nebulosa planetária')">Composição</button>
+            <button (click)="InformacoesGerais('buraco negro')">Informações gerais</button>
           </div>
         </div>
         <div *ngIf="nebulosaplanetariaCicloVida">
@@ -363,7 +376,7 @@
       </div>
 
       <div class="conteudo">
-        <h2>VI. {{ anabranca.name }}</h2>
+        <h2>VII. {{ anabranca.name }}</h2>
         <div class="estrela-fase">
           <img src="{{ anabranca.img }}" alt="" />
           <div class="btns">
@@ -371,6 +384,7 @@
             <button (click)="oQueE('Anã branca')">O que é?</button>
             <button (click)="tempoFusao('Anã branca')">Tempo de Fusão</button>
             <button (click)="composicao('Anã branca')">Composição</button>
+            <button (click)="InformacoesGerais('buraco negro')">Informações gerais</button>
           </div>
         </div>
         <div *ngIf="anabrancaCicloVida">
@@ -402,6 +416,7 @@
             <button (click)="oQueE('nebulosa')">O que é?</button>
             <button (click)="tempoFusao('nebulosa')">Tempo de Fusão</button>
             <button (click)="composicao('nebulosa')">Composição</button>
+            <button (click)="InformacoesGerais('buraco negro')">Informações gerais</button>
           </div>
         </div>
         <div *ngIf="nebulosaCicloVida">
@@ -423,40 +438,67 @@
       </div>
 
       <div class="conteudo">
-        <h2>II. {{ sequenciaprincipal.name }}</h2>
+        <h2>II. {{ protoestrela.name }}</h2>
         <div class="estrela-fase">
-          <img src="{{ sequenciaprincipal.img }}" alt="" />
+          <img src="{{ protoestrela.img }}" alt="" />
           <div class="btns">
-            <button (click)="cicloVida('Gigante vermelha')">
-              Ciclo de Vida
-            </button>
-            <button (click)="oQueE('Gigante vermelha')">O que é?</button>
-            <button (click)="tempoFusao('Gigante vermelha')">
-              Tempo de Fusão
-            </button>
-            <button (click)="composicao('Gigante vermelha')">Composição</button>
+            <button (click)="cicloVida('protoestrela')">Ciclo de Vida</button>
+            <button (click)="oQueE('protoestrela')">O que é?</button>
+            <button (click)="tempoFusao('protoestrela')">Tempo de Fusão</button>
+            <button (click)="composicao('protoestrela')">Composição</button>
+            <button (click)="InformacoesGerais('buraco negro')">Informações gerais</button>
           </div>
         </div>
-        <div *ngIf="sequenciaprincipalCicloVida">
+        <div *ngIf="protoEstrelaCicloVida">
           <h3>Ciclo de vida</h3>
-          <p>{{ sequenciaprincipal.ciclodevida }}</p>
+          <p>{{ protoestrela.ciclodevida }}</p>
         </div>
-        <div *ngIf="sequenciaprincipaloQueE">
+        <div *ngIf="protoEstrelaoQueE">
           <h3>O que é?</h3>
-          <p>{{ sequenciaprincipal.oque }}</p>
+          <p>{{ protoestrela.oque }}</p>
         </div>
-        <div *ngIf="sequenciaprincipalTempoFusao">
+        <div *ngIf="protoEstrelaTempoFusao">
           <h3>Processo de fusão</h3>
-          <p>{{ sequenciaprincipal.processofusao }}</p>
+          <p>{{ protoestrela.processofusao }}</p>
         </div>
-        <div *ngIf="sequenciaprincipalComposicao">
+        <div *ngIf="protoEstrelaComposicao">
           <h3>Composição</h3>
-          <p>{{ sequenciaprincipal.composicao }}</p>
+          <p>{{ protoestrela.composicao }}</p>
         </div>
       </div>
 
       <div class="conteudo">
-        <h2>III. {{ estreladewolf.name }}</h2>
+        <h2>III. {{ brancoazulada.name }}</h2>
+        <div class="estrela-fase">
+          <img src="{{ brancoazulada.img }}" alt="" />
+          <div class="btns">
+            <button (click)="cicloVida('sequencia principal')">Ciclo de Vida</button>
+            <button (click)="oQueE('sequencia principal')">O que é?</button>
+            <button (click)="tempoFusao('sequencia principal')">Tempo de Fusão</button>
+            <button (click)="composicao('sequencia principal')">Composição</button>
+            <button (click)="InformacoesGerais('sequencia principal')">Informações gerais</button>
+          </div>
+        </div>
+        <div *ngIf="brancoazuladaCicloVida">
+          <h3>Ciclo de vida</h3>
+          <p>{{ brancoazulada.ciclodevida }}</p>
+        </div>
+        <div *ngIf="brancoazuladaoQueE">
+          <h3>O que é?</h3>
+          <p>{{ brancoazulada.oque }}</p>
+        </div>
+        <div *ngIf="brancoazuladaTempoFusao">
+          <h3>Processo de fusão</h3>
+          <p>{{ brancoazulada.processofusao }}</p>
+        </div>
+        <div *ngIf="brancoazuladaComposicao">
+          <h3>Composição</h3>
+          <p>{{ brancoazulada.composicao }}</p>
+        </div>
+      </div>
+
+      <div class="conteudo">
+        <h2>IV. {{ estreladewolf.name }}</h2>
         <div class="estrela-fase">
           <img src="{{ estreladewolf.img }}" alt="" />
           <div class="btns">
@@ -464,6 +506,7 @@
             <button (click)="oQueE('Gigante vermelha')">O que é?</button>
             <button (click)="tempoFusao('Gigante vermelha')"> Tempo de Fusão</button>
             <button (click)="composicao('Gigante vermelha')">Composição</button>
+            <button (click)="InformacoesGerais('buraco negro')">Informações gerais</button>
           </div>
         </div>
         <div *ngIf="estreladewolfCicloVida">
@@ -485,14 +528,15 @@
       </div>
 
       <div class="conteudo">
-        <h2>IV. {{ supernova.name }}</h2>
+        <h2>V. {{ supernova.name }}</h2>
         <div class="estrela-fase">
           <img src="{{ supernova.img }}" alt="" />
           <div class="btns">
             <button (click)="cicloVida('supernova')">Ciclo de Vida</button>
             <button (click)="oQueE('supernova')">O que é?</button>
-            <button (click)="tempoFusao('supernova')">Tempo de Fusão</button>
+            <button (click)="tempoFusao('supernova')"> Tempo de Fusão</button>
             <button (click)="composicao('supernova')">Composição</button>
+            <button (click)="InformacoesGerais('supernova')">Informações gerais</button>
           </div>
         </div>
         <div *ngIf="supernovaCicloVida">
@@ -514,6 +558,170 @@
       </div>
 
       <div class="conteudo">
+        <h2>VI. {{ estreladeneutronsoudequarks.name }}</h2>
+        <div class="estrela-fase">
+          <img src="{{ estreladeneutronsoudequarks.img }}" alt="" />
+          <div class="btns">
+            <button (click)="cicloVida('estrela de neutrons ou de quarks')">Ciclo de Vida</button>
+            <button (click)="oQueE('estrela de neutrons ou de quarks')">O que é?</button>
+            <button (click)="tempoFusao('estrela de neutrons ou de quarks')">Tempo de Fusão</button>
+            <button (click)="composicao('estrela de neutrons ou de quarks')">Composição</button>
+            <button (click)="InformacoesGerais('estrela de neutrons ou de quarks')">Informações gerais</button>
+          </div>
+        </div>
+        <div *ngIf="estreladeneutronsoudequarksCicloVida">
+          <h3>Ciclo de vida</h3>
+          <p>{{ estreladeneutronsoudequarks.ciclodevida }}</p>
+        </div>
+        <div *ngIf="estreladeneutronsoudequarksoQueE">
+          <h3>O que é?</h3>
+          <p>{{ estreladeneutronsoudequarks.oque }}</p>
+        </div>
+        <div *ngIf="estreladeneutronsoudequarksTempoFusao">
+          <h3>Processo de fusão</h3>
+          <p>{{ estreladeneutronsoudequarks.processofusao }}</p>
+        </div>
+        <div *ngIf="estreladeneutronsoudequarksComposicao">
+          <h3>Composição</h3>
+          <p>{{ estreladeneutronsoudequarks.composicao }}</p>
+        </div>
+        <div *ngIf="estreladeneutronsoudequarksInformacoesGerais">
+          <h3>O que é?</h3>
+          <p>{{ estreladeneutronsoudequarks.informacoesgerais}}</p>
+        </div>
+      </div>
+    </div>
+
+    <div class="fase" *ngSwitchCase="'quarto'">
+      <div class="conteudo">
+        <h2>I. {{ nebulosa.name }}</h2>
+        <div class="estrela-fase">
+          <img src="{{ nebulosa.img }}" alt="" />
+          <div class="btns">
+            <button (click)="cicloVida('nebulosa')">Ciclo de Vida</button>
+            <button (click)="oQueE('nebulosa')">O que é?</button>
+            <button (click)="tempoFusao('nebulosa')">Tempo de Fusão</button>
+            <button (click)="composicao('nebulosa')">Composição</button>
+            <button (click)="InformacoesGerais('buraco negro')">Informações gerais</button>
+          </div>
+        </div>
+        <div *ngIf="nebulosaCicloVida">
+          <h3>Ciclo de vida</h3>
+          <p>{{ nebulosa.ciclodevida }}</p>
+        </div>
+        <div *ngIf="nebulosaoQueE">
+          <h3>O que é?</h3>
+          <p>{{ nebulosa.oque }}</p>
+        </div>
+        <div *ngIf="nebulosaTempoFusao">
+          <h3>Processo de fusão</h3>
+          <p>{{ nebulosa.processofusao }}</p>
+        </div>
+        <div *ngIf="nebulosaComposicao">
+          <h3>Composição</h3>
+          <p>{{ nebulosa.composicao }}</p>
+        </div>
+        <div *ngIf="nebulosaInformacoesGerais">
+          <h3>Informações Gerais</h3>
+          <p>{{ nebulosa.informacoesgerais }}</p>
+        </div>
+      </div>
+
+      <div class="conteudo">
+        <h2>II. {{ protoestrela.name }}</h2>
+        <div class="estrela-fase">
+          <img src="{{ protoestrela.img }}" alt="" />
+          <div class="btns">
+            <button (click)="cicloVida('protoestrela')">Ciclo de Vida</button>
+            <button (click)="oQueE('protoestrela')">O que é?</button>
+            <button (click)="tempoFusao('protoestrela')">Tempo de Fusão</button>
+            <button (click)="composicao('protoestrela')">Composição</button>
+            <button (click)="InformacoesGerais('protoestrela')">Informações gerais</button>
+          </div>
+        </div>
+        <div *ngIf="protoEstrelaCicloVida">
+          <h3>Ciclo de vida</h3>
+          <p>{{ protoestrela.ciclodevida }}</p>
+        </div>
+        <div *ngIf="protoEstrelaoQueE">
+          <h3>O que é?</h3>
+          <p>{{ protoestrela.oque }}</p>
+        </div>
+        <div *ngIf="protoEstrelaTempoFusao">
+          <h3>Processo de fusão</h3>
+          <p>{{ protoestrela.processofusao }}</p>
+        </div>
+        <div *ngIf="protoEstrelaComposicao">
+          <h3>Composição</h3>
+          <p>{{ protoestrela.composicao }}</p>
+        </div>
+        <div *ngIf="protoEstrelaInformacoesGerais">
+          <h3>Informações Gerais</h3>
+          <p>{{ protoestrela.informacoesgerais }}</p>
+        </div>
+      </div>
+
+      <div class="conteudo">
+        <h2>III. {{ giganteazul.name }}</h2>
+        <div class="estrela-fase">
+          <img src="{{ giganteazul.img }}" alt="" />
+          <div class="btns">
+            <button (click)="cicloVida('g[[igante azul')">Ciclo de Vida</button>
+            <button (click)="oQueE('gigante azul')">O que é?</button>
+            <button (click)="tempoFusao('gigantea zul')">Tempo de Fusão</button>
+            <button (click)="composicao('gigante azul')">Composição</button>
+            <button (click)="InformacoesGerais('gigante azul')">Informações gerais</button>
+          </div>
+        </div>
+        <div *ngIf="giganteazulCicloVida">
+          <h3>Ciclo de vida</h3>
+          <p>{{ giganteazul.ciclodevida }}</p>
+        </div>
+        <div *ngIf="giganteazuloQueE">
+          <h3>O que é?</h3>
+          <p>{{ giganteazul.oque }}</p>
+        </div>
+        <div *ngIf="giganteazulTempoFusao">
+          <h3>Processo de fusão</h3>
+          <p>{{ giganteazul.processofusao }}</p>
+        </div>
+        <div *ngIf="giganteazulComposicao">
+          <h3>Composição</h3>
+          <p>{{ giganteazul.composicao }}</p>
+        </div>
+      </div>
+
+      <div class="conteudo">
+        <h2>IV. {{ estreladewolf.name }}</h2>
+        <div class="estrela-fase">
+          <img src="{{ estreladewolf.img }}" alt="" />
+          <div class="btns">
+            <button (click)="cicloVida('estrela de wolf')">Ciclo de Vida</button>
+            <button (click)="oQueE('estrela de wolf')">O que é?</button>
+            <button (click)="tempoFusao('estrela de wolf')">Tempo de Fusão</button>
+            <button (click)="composicao('estrela de wolf')">Composição</button>
+            <button (click)="InformacoesGerais('estrela de wolf')">Informações gerais</button>
+          </div>
+        </div>
+        <div *ngIf="estreladewolfCicloVida">
+          <h3>Ciclo de vida</h3>
+          <p>{{ estreladewolf.ciclodevida }}</p>
+        </div>
+        <div *ngIf="estreladewolfoQueE">
+          <h3>O que é?</h3>
+          <p>{{ estreladewolf.oque }}</p>
+        </div>
+        <div *ngIf="estreladewolfTempoFusao">
+          <h3>Processo de fusão</h3>
+          <p>{{ estreladewolf.processofusao }}</p>
+        </div>
+        <div *ngIf="estreladewolfComposicao">
+          <h3>Composição</h3>
+          <p>{{ estreladewolf.composicao }}</p>
+        </div>
+      </div>
+
+      <div class="conteudo">
         <h2>V. {{ supernova.name }}</h2>
         <div class="estrela-fase">
           <img src="{{ supernova.img }}" alt="" />
@@ -522,6 +730,7 @@
             <button (click)="oQueE('supernova')">O que é?</button>
             <button (click)="tempoFusao('supernova')"> Tempo de Fusão</button>
             <button (click)="composicao('supernova')">Composição</button>
+            <button (click)="InformacoesGerais('supernova')">Informações gerais</button>
           </div>
         </div>
         <div *ngIf="supernovaCicloVida">
@@ -547,161 +756,11 @@
         <div class="estrela-fase">
           <img src="{{ buraconegro.img }}" alt="" />
           <div class="btns">
-            <button (click)="cicloVida('estrela de neutrons ou de quarks')">Ciclo de Vida</button>
-            <button (click)="oQueE('estrela de neutrons ou de quarks')">O que é?</button>
-            <button (click)="tempoFusao('estrela de neutrons ou de quarks')">Tempo de Fusão</button>
-            <button (click)="composicao('estrela de neutrons ou de quarks')">Composição</button>
-          </div>
-        </div>
-        <div *ngIf="buraconegroCicloVida">
-          <h3>Ciclo de vida</h3>
-          <p>{{ buraconegro.ciclodevida }}</p>
-        </div>
-        <div *ngIf="buraconegrooQueE">
-          <h3>O que é?</h3>
-          <p>{{ buraconegro.oque }}</p>
-        </div>
-        <div *ngIf="buraconegroTempoFusao">
-          <h3>Processo de fusão</h3>
-          <p>{{ buraconegro.processofusao }}</p>
-        </div>
-        <div *ngIf="buraconegroComposicao">
-          <h3>Composição</h3>
-          <p>{{ buraconegro.composicao }}</p>
-        </div>
-      </div>
-    </div>
-
-    <div class="fase" *ngSwitchCase="'quarto'">
-      <div class="conteudo">
-        <h2>I. {{ nebulosa.name }}</h2>
-        <div class="estrela-fase">
-          <img src="{{ nebulosa.img }}" alt="" />
-          <div class="btns">
-            <button (click)="cicloVida('nebulosa')">Ciclo de Vida</button>
-            <button (click)="oQueE('nebulosa')">O que é?</button>
-            <button (click)="tempoFusao('nebulosa')">Tempo de Fusão</button>
-            <button (click)="composicao('nebulosa')">Composição</button>
-          </div>
-        </div>
-        <div *ngIf="nebulosaCicloVida">
-          <h3>Ciclo de vida</h3>
-          <p>{{ nebulosa.ciclodevida }}</p>
-        </div>
-        <div *ngIf="nebulosaoQueE">
-          <h3>O que é?</h3>
-          <p>{{ nebulosa.oque }}</p>
-        </div>
-        <div *ngIf="nebulosaTempoFusao">
-          <h3>Processo de fusão</h3>
-          <p>{{ nebulosa.processofusao }}</p>
-        </div>
-        <div *ngIf="nebulosaComposicao">
-          <h3>Composição</h3>
-          <p>{{ nebulosa.composicao }}</p>
-        </div>
-      </div>
-
-      <div class="conteudo">
-        <h2>II. {{ sequenciaprincipal.name }}</h2>
-        <div class="estrela-fase">
-          <img src="{{ sequenciaprincipal.img }}" alt="" />
-          <div class="btns">
-            <button (click)="cicloVida('Gigante vermelha')">
-              Ciclo de Vida
-            </button>
-            <button (click)="oQueE('Gigante vermelha')">O que é?</button>
-            <button (click)="tempoFusao('Gigante vermelha')">
-              Tempo de Fusão
-            </button>
-            <button (click)="composicao('Gigante vermelha')">Composição</button>
-          </div>
-        </div>
-        <div *ngIf="sequenciaprincipalCicloVida">
-          <h3>Ciclo de vida</h3>
-          <p>{{ sequenciaprincipal.ciclodevida }}</p>
-        </div>
-        <div *ngIf="sequenciaprincipaloQueE">
-          <h3>O que é?</h3>
-          <p>{{ sequenciaprincipal.oque }}</p>
-        </div>
-        <div *ngIf="sequenciaprincipalTempoFusao">
-          <h3>Processo de fusão</h3>
-          <p>{{ sequenciaprincipal.processofusao }}</p>
-        </div>
-        <div *ngIf="sequenciaprincipalComposicao">
-          <h3>Composição</h3>
-          <p>{{ sequenciaprincipal.composicao }}</p>
-        </div>
-      </div>
-
-      <div class="conteudo">
-        <h2>III. {{ estreladewolf.name }}</h2>
-        <div class="estrela-fase">
-          <img src="{{ estreladewolf.img }}" alt="" />
-          <div class="btns">
-            <button (click)="cicloVida('Gigante vermelha')">Ciclo de Vida</button>
-            <button (click)="oQueE('Gigante vermelha')">O que é?</button>
-            <button (click)="tempoFusao('Gigante vermelha')">Tempo de Fusão</button>
-            <button (click)="composicao('Gigante vermelha')">Composição</button>
-          </div>
-        </div>
-        <div *ngIf="estreladewolfCicloVida">
-          <h3>Ciclo de vida</h3>
-          <p>{{ estreladewolf.ciclodevida }}</p>
-        </div>
-        <div *ngIf="estreladewolfoQueE">
-          <h3>O que é?</h3>
-          <p>{{ estreladewolf.oque }}</p>
-        </div>
-        <div *ngIf="estreladewolfTempoFusao">
-          <h3>Processo de fusão</h3>
-          <p>{{ estreladewolf.processofusao }}</p>
-        </div>
-        <div *ngIf="estreladewolfComposicao">
-          <h3>Composição</h3>
-          <p>{{ estreladewolf.composicao }}</p>
-        </div>
-      </div>
-
-      <div class="conteudo">
-        <h2>V. {{ supernova.name }}</h2>
-        <div class="estrela-fase">
-          <img src="{{ supernova.img }}" alt="" />
-          <div class="btns">
-            <button (click)="cicloVida('supernova')">Ciclo de Vida</button>
-            <button (click)="oQueE('supernova')">O que é?</button>
-            <button (click)="tempoFusao('supernova')"> Tempo de Fusão</button>
-            <button (click)="composicao('supernova')">Composição</button>
-          </div>
-        </div>
-        <div *ngIf="supernovaCicloVida">
-          <h3>Ciclo de vida</h3>
-          <p>{{ supernova.ciclodevida }}</p>
-        </div>
-        <div *ngIf="supernovaoQueE">
-          <h3>O que é?</h3>
-          <p>{{ supernova.oque }}</p>
-        </div>
-        <div *ngIf="supernovaTempoFusao">
-          <h3>Processo de fusão</h3>
-          <p>{{ supernova.processofusao }}</p>
-        </div>
-        <div *ngIf="supernovaComposicao">
-          <h3>Composição</h3>
-          <p>{{ supernova.composicao }}</p>
-        </div>
-      </div>
-
-      <div class="conteudo">
-        <h2>V. {{ buraconegro.name }}</h2>
-        <div class="estrela-fase">
-          <img src="{{ buraconegro.img }}" alt="" />
-          <div class="btns">
             <button (click)="cicloVida('buraco negro')">Ciclo de Vida</button>
             <button (click)="oQueE('buraco negro')">O que é?</button>
             <button (click)="tempoFusao('buraco negro')">Tempo de Fusão</button>
             <button (click)="composicao('buraco negro')">Composição</button>
+            <button (click)="InformacoesGerais('buraco negro')">Informações gerais</button>
           </div>
         </div>
         <div *ngIf="buraconegroCicloVida">
@@ -724,7 +783,6 @@
     </div>
 
     <div class="fase" *ngSwitchCase="'segundo'">
-      <!-- apenas duplicar conteudo -->
       <div class="conteudo"></div>
     </div>
     <div class="fase" *ngSwitchCase="'terceiro'">

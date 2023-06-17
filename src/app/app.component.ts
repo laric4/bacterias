@@ -16,71 +16,86 @@ export class AppComponent implements OnInit {
   nebulosaComposicao: boolean = false;
   nebulosaTempoFusao: boolean = false;
   nebulosaCicloVida: boolean = false;
+  nebulosaInformacoesGerais: boolean = true;
 
   protoEstrelaoQueE: boolean = false;
   protoEstrelaComposicao: boolean = false;
   protoEstrelaTempoFusao: boolean = false;
   protoEstrelaCicloVida: boolean = false;
+  protoEstrelaInformacoesGerais: boolean = false;
 
   anavermelhaoQueE: boolean = false;
   anavermelhaComposicao: boolean = false;
   anavermelhaTempoFusao: boolean = false;
   anavermelhaCicloVida: boolean = false;
+  anavermelhaInformacoesGerais: boolean = false;
 
   anabrancaoQueE: boolean = false;
   anabrancaComposicao: boolean = false;
   anabrancaTempoFusao: boolean = false;
   anabrancaCicloVida: boolean = false;
+  anabrancaInformacoesGerais: boolean = false;
 
   gigantevermelhaoQueE: boolean = false;
   gigantevermelhaComposicao: boolean = false;
   gigantevermelhaTempoFusao: boolean = false;
   gigantevermelhaCicloVida: boolean = false;
+  gigantevermelhaInformacoesGerais: boolean = false;
 
   supergigantevermelhaoQueE: boolean = false;
   supergigantevermelhaComposicao: boolean = false;
   supergigantevermelhaTempoFusao: boolean = false;
   supergigantevermelhaCicloVida: boolean = false;
+  supergigantevermelhaInformacoesGerais: boolean = false;
 
   nebulosaplanetariaoQueE: boolean = false;
   nebulosaplanetariaComposicao: boolean = false;
   nebulosaplanetariaTempoFusao: boolean = false;
   nebulosaplanetariaCicloVida: boolean = false;
+  nebulosaplanetariaInformacoesGerais: boolean = false;
 
-  sequenciaprincipaloQueE: boolean = false;
-  sequenciaprincipalComposicao: boolean = false;
-  sequenciaprincipalTempoFusao: boolean = false;
-  sequenciaprincipalCicloVida: boolean = false;
+  estrelaamarelaoQueE: boolean = false;
+  estrelaamarelaComposicao: boolean = false;
+  estrelaamarelaTempoFusao: boolean = false;
+  estrelaamarelaCicloVida: boolean = false;
+  estrelaamarelaInformacoesGerais: boolean = false;
 
   estreladewolfoQueE: boolean = false;
   estreladewolfComposicao: boolean = false;
   estreladewolfTempoFusao: boolean = false;
   estreladewolfCicloVida: boolean = false;
+  estreladewolfInformacoesGerais: boolean = false;
 
   supernovaoQueE: boolean = false;
   supernovaComposicao: boolean = false;
   supernovaTempoFusao: boolean = false;
   supernovaCicloVida: boolean = false;
+  supernovaInformacoesGerais: boolean = false;
 
   giganteazuloQueE: boolean = false;
   giganteazulComposicao: boolean = false;
   giganteazulTempoFusao: boolean = false;
   giganteazulCicloVida: boolean = false;
+  giganteazulInformacoesGerais: boolean = false;
 
   estreladeneutronsoudequarksoQueE: boolean = false;
   estreladeneutronsoudequarksComposicao: boolean = false;
   estreladeneutronsoudequarksTempoFusao: boolean = false;
   estreladeneutronsoudequarksCicloVida: boolean = false;
+  estreladeneutronsoudequarksInformacoesGerais: boolean = false;
 
   brancoazuladaoQueE: boolean = false;
   brancoazuladaComposicao: boolean = false;
   brancoazuladaTempoFusao: boolean = false;
   brancoazuladaCicloVida: boolean = false;
+  brancoazuladaInformacoesGerais: boolean = false;
 
   buraconegrooQueE: boolean = false;
   buraconegroComposicao: boolean = false;
   buraconegroTempoFusao: boolean = false;
   buraconegroCicloVida: boolean = false;
+  buraconegroInformacoesGerais: boolean = false;
+
 
   oQueE(arg0: string) {
     if (arg0 == 'nebulosa') {
@@ -98,7 +113,7 @@ export class AppComponent implements OnInit {
     } else if (arg0 == 'Nebulosa planetária') {
       this.nebulosaplanetariaoQueE = !this.nebulosaplanetariaoQueE;
     } else if (arg0 == 'Sequencia principal') {
-      this.sequenciaprincipaloQueE = !this.sequenciaprincipaloQueE;
+      this.estrelaamarelaoQueE = !this.estrelaamarelaoQueE;
     } else if (arg0 == 'estrela de wolf') {
       this.estreladewolfoQueE = !this.estreladewolfoQueE;
     } else if (arg0 == 'supernova') {
@@ -131,7 +146,7 @@ export class AppComponent implements OnInit {
     } else if (arg0 == 'Nebulosa planetária') {
       this.nebulosaplanetariaTempoFusao = !this.nebulosaplanetariaTempoFusao;
     } else if (arg0 == 'Sequencia principal') {
-      this.sequenciaprincipalTempoFusao = !this.sequenciaprincipalTempoFusao;
+      this.estrelaamarelaTempoFusao = !this.estrelaamarelaTempoFusao;
     } else if (arg0 == 'estrela de wolf') {
       this.estreladewolfTempoFusao = !this.estreladewolfTempoFusao;
     } else if (arg0 == 'supernova') {
@@ -164,7 +179,7 @@ export class AppComponent implements OnInit {
     } else if (arg0 == 'Nebulosa planetária') {
       this.nebulosaplanetariaComposicao = !this.nebulosaplanetariaComposicao;
     } else if (arg0 == 'Sequencia principal') {
-      this.sequenciaprincipalComposicao = !this.sequenciaprincipalComposicao;
+      this.estrelaamarelaComposicao = !this.estrelaamarelaComposicao;
     } else if (arg0 == 'estrela de wolf') {
       this.estreladewolfComposicao = !this.estreladewolfComposicao;
     } else if (arg0 == 'supernova') {
@@ -196,7 +211,7 @@ export class AppComponent implements OnInit {
     } else if (arg0 == 'Nebulosa planetária') {
       this.nebulosaplanetariaCicloVida = !this.nebulosaplanetariaCicloVida;
     } else if (arg0 == 'Sequencia principal') {
-      this.sequenciaprincipalCicloVida = !this.sequenciaprincipalCicloVida;
+      this.estrelaamarelaCicloVida = !this.estrelaamarelaCicloVida;
     } else if (arg0 == 'estrela de wolf') {
       this.estreladewolfCicloVida = !this.estreladewolfCicloVida;
     } else if (arg0 == 'supernova') {
@@ -212,6 +227,39 @@ export class AppComponent implements OnInit {
       this.buraconegroCicloVida = !this.buraconegroCicloVida;
     }
   }
+  InformacoesGerais(arg0: string) {
+    if (arg0 == 'nebulosa') {
+      this.nebulosaInformacoesGerais = !this.nebulosaInformacoesGerais;
+    } else if (arg0 == 'protoestrela') {
+      this.protoEstrelaInformacoesGerais = !this.protoEstrelaInformacoesGerais;
+    } else if (arg0 == 'Anã vermelha') {
+      this.anavermelhaInformacoesGerais = !this.anavermelhaInformacoesGerais;
+    } else if (arg0 == 'Anã branca') {
+      this.anabrancaInformacoesGerais = !this.anabrancaInformacoesGerais;
+    } else if (arg0 == 'Gigante vermelha') {
+      this.gigantevermelhaInformacoesGerais = !this.gigantevermelhaInformacoesGerais;
+    } else if (arg0 == 'Supergigante vermelha') {
+      this.supergigantevermelhaInformacoesGerais =
+        !this.supergigantevermelhaInformacoesGerais;
+    } else if (arg0 == 'Nebulosa planetária') {
+      this.nebulosaplanetariaInformacoesGerais = !this.nebulosaplanetariaInformacoesGerais;
+    } else if (arg0 == 'Sequencia principal') {
+      this.estrelaamarelaInformacoesGerais = !this.estrelaamarelaInformacoesGerais;
+    } else if (arg0 == 'estrela de wolf') {
+      this.estreladewolfInformacoesGerais = !this.estreladewolfInformacoesGerais;
+    } else if (arg0 == 'supernova') {
+      this.supernovaInformacoesGerais = !this.supernovaInformacoesGerais;
+    } else if (arg0 == 'gigante azul') {
+      this.giganteazulInformacoesGerais = !this.giganteazulInformacoesGerais;
+    } else if (arg0 == 'estrela de neutrons ou de quarks') {
+      this.estreladeneutronsoudequarksInformacoesGerais =
+        !this.estreladeneutronsoudequarksInformacoesGerais;
+    } else if (arg0 == 'branco azulada') {
+      this.brancoazuladaInformacoesGerais = !this.brancoazuladaInformacoesGerais;
+    } else if (arg0 == 'buraco negro') {
+      this.buraconegroInformacoesGerais = !this.buraconegroInformacoesGerais;
+    }
+}
 
   nebulosa = {
     name: 'Nebulosa',
@@ -219,6 +267,7 @@ export class AppComponent implements OnInit {
     composicao: 'ccccc',
     processofusao: 'dddddddd',
     oque: 'AAAAAAAAA',
+    informacoesgerais: 'sdraweqe',
     img: '../assets/nebulosa.svg',
   };
   protoestrela = {
@@ -227,6 +276,7 @@ export class AppComponent implements OnInit {
     composicao: 'aa',
     processofusao: 'aa',
     oque: 'aaa',
+    informacoesgerais: '',
     img: '../assets/protoestrela.svg',
   };
   anavermelha = {
@@ -235,6 +285,7 @@ export class AppComponent implements OnInit {
     composicao: '',
     processofusao: '',
     oque: '',
+    informacoesgerais: '',
     img: '../assets/anavermelha.svg',
   };
   anabranca = {
@@ -243,6 +294,7 @@ export class AppComponent implements OnInit {
     composicao: 'aa',
     processofusao: 'aaaaa',
     oque: 'aaaaa',
+    informacoesgerais: '',
     img: '../assets/anabranca.svg',
   };
   gigantevermelha = {
@@ -251,6 +303,7 @@ export class AppComponent implements OnInit {
     composicao: '',
     processofusao: '',
     oque: '',
+    informacoesgerais: '',
     img: '../assets/gigantevermelha.svg',
   };
   supergigantevermelha = {
@@ -259,6 +312,7 @@ export class AppComponent implements OnInit {
     composicao: '',
     processofusao: '',
     oque: '',
+    informacoesgerais: '',
     img: '../assets/supergigantevermelha.svg',
   };
   nebulosaplanetaria = {
@@ -267,15 +321,17 @@ export class AppComponent implements OnInit {
     composicao: '',
     processofusao: '',
     oque: '',
+    informacoesgerais: '',
     img: '../assets/nebulosaplanetaria.svg',
   };
-  sequenciaprincipal= {
-    name: 'Sequencia principal',
+  estrelaamarela= {
+    name: 'estrela amarela',
     ciclodevida: '',
     composicao: '',
     processofusao: '',
     oque: '',
-    img: '',
+    informacoesgerais: '',
+    img: '../assets/estrelaamarela2.svg',
   };
   estreladewolf = {
     name: 'Estrela de wolf',
@@ -283,6 +339,7 @@ export class AppComponent implements OnInit {
     composicao: '',
     processofusao: '',
     oque: '',
+    informacoesgerais: '',
     img: '../assets/estreladewolf.svg',
   };
   supernova = {
@@ -291,6 +348,7 @@ export class AppComponent implements OnInit {
     composicao: '',
     processofusao: '',
     oque: '',
+    informacoesgerais: '',
     img: '../assets/supernova.svg',
   };
   giganteazul = {
@@ -299,6 +357,7 @@ export class AppComponent implements OnInit {
     composicao: '',
     processofusao: '',
     oque: '',
+    informacoesgerais: '',
     img: '../assets/giganteazul.svg',
   };
   estreladeneutronsoudequarks = {
@@ -307,7 +366,8 @@ export class AppComponent implements OnInit {
     composicao: '',
     processofusao: '',
     oque: '',
-    img: '',
+    informacoesgerais: '',
+    img: '../assets/estreladeneutrons.svg',
   };
   brancoazulada = {
     name: 'Branco azulada',
@@ -315,6 +375,7 @@ export class AppComponent implements OnInit {
     composicao: '',
     processofusao: '',
     oque: '',
+    informacoesgerais: '',
     img: '../assets/brancoazulada.svg',
   };
   buraconegro = {
@@ -323,6 +384,7 @@ export class AppComponent implements OnInit {
     composicao: '',
     processofusao: '',
     oque: '',
+    informacoesgerais: '',
     img: '../assets/buraconegro.svg',
   };
 
