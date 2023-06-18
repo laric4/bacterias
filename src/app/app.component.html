@@ -30,7 +30,7 @@
   </div>
 
   <div class="resultado" [ngSwitch]="exibir">
-    <div class="fase">
+    <div class="fase" *ngSwitchCase="'primeiro'">
       <app-nebulosa></app-nebulosa>
       <app-protoestrela></app-protoestrela>
       <app-ana-vermelha></app-ana-vermelha>
