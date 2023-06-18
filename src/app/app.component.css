@@ -1,27 +1,8 @@
-.nav {
-  width: 100%;
-  height: 8rem;
-  background-color: #b08ecd;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  padding: 0 2rem;
-  border-bottom: 0.5rem solid #f8e5a2;
-}
-.info {
-  display: flex;
-  align-items: center;
-  gap: 1rem;
-  & p {
-    text-transform: uppercase;
-    font-weight: 700;
-  }
-}
 .hr {
   background-color: #f8e5a2;
   width: 95%;
-  height: 2px;
-  margin: 10px auto;
+  height: 0.125rem;
+  margin: 0.625rem auto;
 }
 .body {
   width: 100%;
@@ -29,7 +10,7 @@
   align-items: center;
   justify-content: center;
   flex-direction: column;
-  gap: 80px;
+  gap: 5rem;
   padding: 3rem 9rem;
   .content {
     width: 100%;
@@ -49,16 +30,16 @@
       justify-content: center;
       & .input {
         display: flex;
-        width: 531px;
-        padding: 14px 22px;
-        border-radius: 63px;
+        width: 33.1875rem;
+        padding: 0.875rem 1.375rem;
+        border-radius: 3.9375rem;
         background-color: #fff;
-        margin: 50px auto 0;
+        margin: 3.125rem auto 0;
         & input {
           border: 0;
           outline: 0;
           width: 100%;
-          font-size: 18px;
+          font-size: 1.125rem;
         }
         & button {
           background: none;
@@ -70,40 +51,20 @@
   }
 
   .resultado {
-    .fase {
-      display: grid;
-      grid-template-columns: 1fr 1fr;
-      gap: 3rem;
-      .conteudo .estrela-fase {
-        display: flex;
-        gap: 1.5rem;
-        align-items: center;
-        margin-bottom: 1rem;
-      }
-      .btns {
-        display: flex;
-        flex-direction: column;
-        align-items: right;
-        gap: 1rem;
-        & button {
-          border: none;
-          background-color: #fff;
-          padding: 0.6rem;
-          text-transform: uppercase;
-          cursor: pointer;
-          border-radius: 1.5rem;
-        }
-      }
-    }
+    width: 100%;
   }
-}
-
-h2 {
-  font-size: 2rem;
-}
-h3 {
-  font-size: 1.5rem;
-}
-p {
-  margin: 0.5rem 0;
+  .fase {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 3rem;
+    justify-items: center;
+    align-items: start;
+    justify-content: space-between;
+  }
+  .app-button{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: .5rem;
+    justify-content: space-between;
+  }
 }
