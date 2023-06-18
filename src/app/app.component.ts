@@ -19,7 +19,6 @@ export class AppComponent implements OnInit {
 
   getMassa(form: FormGroup) {
     let M = form.value.massa;
-    this.exibir = 'primeiro';
     if (0.08 <= M && M <= 0.45) {
       this.exibir = 'primeiro';
     } else if (0.45 < M && M <= 8) {
