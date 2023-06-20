@@ -1,12 +1,14 @@
 import { Component } from '@angular/core';
 import { GenericContentComponent } from 'src/app/generic-content/generic-content.component';
 import { ModalService } from 'src/app/modal/service/modal.service';
+import { ButtonComponent } from "../../button/button.component";
 
 @Component({
-  selector: 'app-supernova',
-  templateUrl: './supernova.component.html',
-  styleUrls: ['./supernova.component.css'],
-  standalone: true
+    selector: 'app-supernova',
+    templateUrl: './supernova.component.html',
+    styleUrls: ['./supernova.component.css'],
+    standalone: true,
+    imports: [ButtonComponent]
 })
 export class SupernovaComponent {
   descriptions = {

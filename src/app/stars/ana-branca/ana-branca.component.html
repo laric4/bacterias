@@ -4,4 +4,9 @@
     <img src="/assets/icons/stars/anabranca.svg" />
     <div class="btns"></div>
   </div>
+  <div class="app-button">
+    <app-button [typename]="'O QUE É'" (onClick)="openModal('O que é uma Anã Branca?', descriptions.oQue)"></app-button>
+    <app-button [typename]="'COMPOSIÇÃO'" (onClick)="openModal('Composição de uma Anã Branca.', descriptions.composicao)"></app-button>
+    <app-button [typename]="'INFORMAÇÕES GERAIS'" (onClick)="openModal('Informações gerais sobre a Anã Branca.', descriptions.informacoesgerais)"></app-button>
+  </div>
 </div>

@@ -1,12 +1,14 @@
 import { Component } from '@angular/core';
 import { GenericContentComponent } from 'src/app/generic-content/generic-content.component';
 import { ModalService } from 'src/app/modal/service/modal.service';
+import { ButtonComponent } from "../../button/button.component";
 
 @Component({
-  selector: 'app-estrela-de-wolf',
-  templateUrl: './estrela-de-wolf.component.html',
-  styleUrls: ['./estrela-de-wolf.component.css'],
-  standalone: true
+    selector: 'app-estrela-de-wolf',
+    templateUrl: './estrela-de-wolf.component.html',
+    styleUrls: ['./estrela-de-wolf.component.css'],
+    standalone: true,
+    imports: [ButtonComponent]
 })
 export class EstrelaDeWolfComponent {
   descriptions = {

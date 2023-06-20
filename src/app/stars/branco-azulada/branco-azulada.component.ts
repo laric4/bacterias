@@ -1,12 +1,14 @@
 import { Component } from '@angular/core';
 import { GenericContentComponent } from 'src/app/generic-content/generic-content.component';
 import { ModalService } from 'src/app/modal/service/modal.service';
+import { ButtonComponent } from "../../button/button.component";
 
 @Component({
-  selector: 'app-branco-azulada',
-  templateUrl: './branco-azulada.component.html',
-  styleUrls: ['./branco-azulada.component.css'],
-  standalone: true
+    selector: 'app-branco-azulada',
+    templateUrl: './branco-azulada.component.html',
+    styleUrls: ['./branco-azulada.component.css'],
+    standalone: true,
+    imports: [ButtonComponent]
 })
 export class BrancoAzuladaComponent {
   descriptions = {

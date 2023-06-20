@@ -1,12 +1,14 @@
 import { Component } from '@angular/core';
 import { GenericContentComponent } from 'src/app/generic-content/generic-content.component';
 import { ModalService } from 'src/app/modal/service/modal.service';
+import { ButtonComponent } from "../../button/button.component";
 
 @Component({
-  selector: 'app-nebulosa-planetaria',
-  templateUrl: './nebulosa-planetaria.component.html',
-  styleUrls: ['./nebulosa-planetaria.component.css'],
-  standalone: true
+    selector: 'app-nebulosa-planetaria',
+    templateUrl: './nebulosa-planetaria.component.html',
+    styleUrls: ['./nebulosa-planetaria.component.css'],
+    standalone: true,
+    imports: [ButtonComponent]
 })
 export class NebulosaPlanetariaComponent {
   descriptions = {

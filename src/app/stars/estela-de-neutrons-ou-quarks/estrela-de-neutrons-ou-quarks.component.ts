@@ -1,12 +1,14 @@
 import { Component } from '@angular/core';
 import { GenericContentComponent } from 'src/app/generic-content/generic-content.component';
 import { ModalService } from 'src/app/modal/service/modal.service';
+import { ButtonComponent } from "../../button/button.component";
 
 @Component({
-  selector: 'app-estrela-de-neutrons-ou-quarks',
-  templateUrl: './estrela-de-neutrons-ou-quarks.component.html',
-  styleUrls: ['./estrela-de-neutrons-ou-quarks.component.css'],
-  standalone: true
+    selector: 'app-estrela-de-neutrons-ou-quarks',
+    templateUrl: './estrela-de-neutrons-ou-quarks.component.html',
+    styleUrls: ['./estrela-de-neutrons-ou-quarks.component.css'],
+    standalone: true,
+    imports: [ButtonComponent]
 })
 export class EstrelaDeNeutronsOuQuarksComponent {
   descriptions = {

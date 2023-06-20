@@ -1,19 +1,20 @@
 import { Component } from '@angular/core';
 import { GenericContentComponent } from 'src/app/generic-content/generic-content.component';
 import { ModalService } from 'src/app/modal/service/modal.service';
+import { ButtonComponent } from "../../button/button.component";
 
 @Component({
-  selector: 'app-gigante-azul',
-  templateUrl: './gigante-azul.component.html',
-  styleUrls: ['./gigante-azul.component.css'],
-  standalone: true
+    selector: 'app-gigante-azul',
+    templateUrl: './gigante-azul.component.html',
+    styleUrls: ['./gigante-azul.component.css'],
+    standalone: true,
+    imports: [ButtonComponent]
 })
 export class GiganteAzulComponent {
   descriptions = {
-    oQue: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut ornare rhoncus mauris et elementum. Sed rhoncus sollicitudin felis vel vulputate. Maecenas dapibus sit amet ante eget efficitur. Vestibulum finibus auctor nisi, at cursus purus dapibus et. Aenean quam erat, egestas ac mi sed, tempus ultricies lorem. Aliquam id pellentesque felis. Donec vel justo ut leo faucibus porta imperdiet non eros. Sed non justo sit amet mauris condimentum varius. Pellentesque porta dui vel feugiat cursus. Vestibulum eget est ipsum. Suspendisse potenti. Maecenas commodo est sollicitudin, fermentum ante eu, bibendum est. Proin eu quam tristique, pretium metus eu, finibus nulla. Nullam dictum bibendum leo at gravida. Nunc tincidunt aliquet tortor a pulvinar. Etiam sit amet lacus quis tortor dapibus egestas ut pulvinar nisi. In et sollicitudin elit. Suspendisse faucibus faucibus nunc, vitae iaculis sapien imperdiet nec. Sed tempor erat nec tellus porta, nec venenatis ex fringilla. Suspendisse et ultrices augue, sit amet congue dui. Nullam sit amet massa et dolor luctus euismod vitae id dolor. Nunc commodo finibus sapien. Nam semper quis nulla et congue.',
-    tempoFusao: '',
-    composicao: '',
-    cicloVida: '',
+    oQue: 'As estrelas azuis são de longe as maiores e mais brilhantes estrelas da galáxia, pois a luz azul carrega mais energia do que a luz vermelha, o que significa que precisa de uma fonte de radiação mais quente para produzi-la.',
+    tempoFusao: 'Uma gigante azul, caracterizada por ser uma estrela muito quente e luminosa, geralmente têm massas superiores a massa do Sol. Com base nessa massa, a estrela terá uma contração e aquecimento rápidos, o que acelera o processo de fusão nuclear. A duração exata desse processo pode variar de algumas centenas de milhares a alguns milhões de anos.',
+    composicao: 'As gigantes azuis são compostas principalmente por hidrogênio (H) e hélio (He), que são os elementos mais abundantes no Universo. No entanto, elas também contêm pequenas quantidades de outros elementos mais pesados, como carbono (C), oxigênio (O), nitrogênio (N), silício (Si), ferro (Fe) e muitos outros.',
   };
   constructor(private modalService: ModalService) {}
 

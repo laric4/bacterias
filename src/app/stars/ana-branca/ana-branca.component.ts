@@ -1,19 +1,20 @@
 import { Component } from '@angular/core';
 import { GenericContentComponent } from 'src/app/generic-content/generic-content.component';
 import { ModalService } from 'src/app/modal/service/modal.service';
+import { ButtonComponent } from "../../button/button.component";
 
 @Component({
-  selector: 'app-ana-branca',
-  templateUrl: './ana-branca.component.html',
-  styleUrls: ['./ana-branca.component.css'],
-  standalone: true
+    selector: 'app-ana-branca',
+    templateUrl: './ana-branca.component.html',
+    styleUrls: ['./ana-branca.component.css'],
+    standalone: true,
+    imports: [ButtonComponent]
 })
 export class AnaBrancaComponent {
   descriptions = {
-    oQue: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut ornare rhoncus mauris et elementum. Sed rhoncus sollicitudin felis vel vulputate. Maecenas dapibus sit amet ante eget efficitur. Vestibulum finibus auctor nisi, at cursus purus dapibus et. Aenean quam erat, egestas ac mi sed, tempus ultricies lorem. Aliquam id pellentesque felis. Donec vel justo ut leo faucibus porta imperdiet non eros. Sed non justo sit amet mauris condimentum varius. Pellentesque porta dui vel feugiat cursus. Vestibulum eget est ipsum. Suspendisse potenti. Maecenas commodo est sollicitudin, fermentum ante eu, bibendum est. Proin eu quam tristique, pretium metus eu, finibus nulla. Nullam dictum bibendum leo at gravida. Nunc tincidunt aliquet tortor a pulvinar. Etiam sit amet lacus quis tortor dapibus egestas ut pulvinar nisi. In et sollicitudin elit. Suspendisse faucibus faucibus nunc, vitae iaculis sapien imperdiet nec. Sed tempor erat nec tellus porta, nec venenatis ex fringilla. Suspendisse et ultrices augue, sit amet congue dui. Nullam sit amet massa et dolor luctus euismod vitae id dolor. Nunc commodo finibus sapien. Nam semper quis nulla et congue.',
-    tempoFusao: '',
-    composicao: '',
-    cicloVida: '',
+    oQue: ' Uma anã branca é o estágio final de evolução de uma estrela de massa baixa ou média, como o nosso Sol. Após esgotar seu combustível nuclear, a estrela passa por uma série de transformações, eventualmente se tornando uma anã branca.As anãs brancas são estrelas muito densas e compactas. Elas são compostas principalmente por carbono e oxigênio, com uma pequena quantidade de hélio e traços de outros elementos. O seu tamanho é comparável ao da Terra, mas sua massa é cerca de uma vez e meia a duas vezes a massa do Sol.',
+    composicao: 'Além de carbono e oxigênio, anãs brancas também podem conter traços de elementos mais pesados, como nitrogênio, néon, magnésio e outros elementos encontrados na tabela periódica.',
+    informacoesgerais: 'Classe espectral: A ou B, Temperatura: 5.000 a 30.000, Exemplos de anãs brancas: Procyon B e Van Maanen 2.',
   };
   constructor(private modalService: ModalService) {}
 

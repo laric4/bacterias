@@ -1,12 +1,14 @@
 import { Component } from '@angular/core';
 import { GenericContentComponent } from 'src/app/generic-content/generic-content.component';
 import { ModalService } from 'src/app/modal/service/modal.service';
+import { ButtonComponent } from "../../button/button.component";
 
 @Component({
-  selector: 'app-super-gigante-vermelha',
-  templateUrl: './super-gigante-vermelha.component.html',
-  styleUrls: ['./super-gigante-vermelha.component.css'],
-  standalone: true
+    selector: 'app-super-gigante-vermelha',
+    templateUrl: './super-gigante-vermelha.component.html',
+    styleUrls: ['./super-gigante-vermelha.component.css'],
+    standalone: true,
+    imports: [ButtonComponent]
 })
 export class SuperGiganteVermelhaComponent {
   descriptions = {
