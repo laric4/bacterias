@@ -1,6 +1,6 @@
 @import url("https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;700&family=Montserrat:wght@500&family=Nunito:wght@300&display=swap");
 
-* {
+* { 
   margin: 0px;
   padding: 0px;
   box-sizing: border-box;
@@ -13,7 +13,10 @@ body {
   height: 100vh;
   width: 100vw;
 
-  background-color: #7c2196;
+  background-image: url(../src/assets/verme.svg);
+  background-repeat: repeat-y;
+  background-size: 100%;
+  background-position: center;
 
   color: #fff;
   overflow-x: hidden;
@@ -45,4 +48,9 @@ p {
 app-generic-content {
   display: flex;
   justify-content: center;
+}
+
+a{
+  text-decoration: none;
+  color: inherit;
 }

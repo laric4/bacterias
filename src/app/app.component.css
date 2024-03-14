@@ -1,7 +1,7 @@
 .hr {
-  background-color: #f8e5a2;
-  width: 95%;
-  height: 0.125rem;
+  background-color: #244351;
+  width: 100%;
+  height: 3rem;
   margin: 0.625rem auto;
 }
 .body {
@@ -33,7 +33,7 @@
         width: 33.1875rem;
         padding: 0.875rem 1.375rem;
         border-radius: 3.9375rem;
-        background-color: #fff;
+        background-color: #ffffff;
         margin: 3.125rem auto 0;
         & input {
           border: 0;
@@ -67,4 +67,12 @@
     gap: .5rem;
     justify-content: space-between;
   }
+}
+.container {
+  box-sizing: border-box;
+  max-width: 1200px;
+  padding-left: 20px;
+  padding-right: 20px;
+  margin-left: auto;
+  margin-right: auto;
 }

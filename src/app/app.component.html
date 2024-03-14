@@ -1,70 +1,11 @@
 <app-nav-bar></app-nav-bar>
 <div class="body">
   <div class="content">
-    <div class="img">
-      <img
-        id="window"
-        src="../assets/fundoroxocomestrela.png"
-        alt="fundo roxo representando um universo com estrelas"
-      />
-    </div>
-    <div class="form">
-      <form [formGroup]="form" (ngSubmit)="getMassa(form)">
-        <img
-          src="../assets/digiteamassadasuaestrela.png"
-          alt="digite a massa da sua estrela"
-        />
-        <div class="input">
-          <input
-            type="number"
-            id="massa"
-            formControlName="massa"
-            placeholder="Digite aqui a massa da estrela..."
-          />
-          <button type="submit">
-            <img src="../assets/icons/random/lupe.svg" alt="lupa" />
-          </button>
-        </div>
-      </form>
-    </div>
-  </div>
+    <img src="../assets/ablbublbublbu.svg" alt="retangulo">
 
-  <div class="resultado" [ngSwitch]="exibir">
-    <div class="fase" *ngSwitchCase="'primeiro'">
-      <app-nebulosa></app-nebulosa>
-      <app-protoestrela></app-protoestrela>
-      <app-ana-vermelha></app-ana-vermelha>
-      <app-gigante-vermelha></app-gigante-vermelha>
-      <app-ana-branca></app-ana-branca>
-    </div>
-    <div class="fase" *ngSwitchCase="'segundo'">
-      <app-nebulosa></app-nebulosa>
-      <app-protoestrela></app-protoestrela>
-      <app-estrela-amarela></app-estrela-amarela>
-      <app-gigante-vermelha></app-gigante-vermelha>
-      <app-super-gigante-vermelha></app-super-gigante-vermelha>
-      <app-nebulosa-planetaria></app-nebulosa-planetaria>
-      <app-ana-branca></app-ana-branca>
-    </div>
-    <div class="fase" *ngSwitchCase="'terceiro'">
-      <app-nebulosa></app-nebulosa>
-      <app-protoestrela></app-protoestrela>
-      <app-branco-azulada></app-branco-azulada>
-      <app-estrela-de-wolf></app-estrela-de-wolf>
-      <app-supernova></app-supernova>
-      <app-estrela-de-neutrons-ou-quarks></app-estrela-de-neutrons-ou-quarks>
-    </div>
-    <div class="fase" *ngSwitchCase="'quarto'">
-      <app-nebulosa></app-nebulosa>
-      <app-protoestrela></app-protoestrela>
-      <app-gigante-azul></app-gigante-azul>
-      <app-estrela-de-wolf></app-estrela-de-wolf>
-      <app-supernova></app-supernova>
-      <app-buraco-negro></app-buraco-negro>
-    </div>
-    <div class="fase" *ngSwitchDefault="''"></div>
-  </div>
+ </div>
+  <div class="content">
+  <img src="../assets/ahahahahaa.svg" alt="verde">
 </div>
-<div class="hr"></div>
-<div class="hr"></div>
+</div>
 <div class="hr"></div>
